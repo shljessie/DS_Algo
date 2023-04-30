@@ -4,7 +4,8 @@ A Self-Tracked Study of Data Structures and Algorithms
 
 Full Implementation of Code of Data Structures and Algorithms
 
-1. DFS_1 = Depth First Search 
+# 1. DFS_1 = Depth First Search 
+
 - Binary Tree  
 - Full Binary Tree : Every Parent has two or no children
 - Perfect Binary Tree : Every node has two children and are at same level
