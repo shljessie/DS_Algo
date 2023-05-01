@@ -12,4 +12,4 @@ Full Implementation of Code of Data Structures and Algorithms
 - Complete Binary Tree : All levels are filled and lean to the left
 - Balanced Binary Tree : A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
 - Binary Search Tree : smaller to left, larger to right. Insert and Deletion (Olog(n) time)
-- AVL Tree
+- AVL Tree : Root has an additional balance value, and we want to balance the tree alonside inserting and dleeting items in the tree. Left and Right rotation.
