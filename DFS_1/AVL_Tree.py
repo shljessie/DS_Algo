@@ -91,6 +91,14 @@ class AVLTree(object):
 
       return root
 
+      
+    def getMinValueNode(self, root):
+      # 가장 왼편에 있는 node 을 찾고 싶은 것, 계속 왼쪽으로 이동시켜 주기
+      if root is None or root.left is None:
+            return root
+         
+      return self.getMinValueNode(root.left)
+
    
     def delete(self, root, key):
       #if there is nothing to delete just return the root.
@@ -103,6 +111,7 @@ class AVLTree(object):
          root.right = self.delete(root.right, key)
       else: 
          # if the key is the same
+         # if the node has one child
          if root.left is None:
             temp = root.right
             root = None
@@ -112,7 +121,15 @@ class AVLTree(object):
             temp = root.left
             root = None
             return temp
-            
+
+         # if the node has two children
+         #get smallest node in right tree
+         temp = self.getMinValue(root.right)
+         # replace that with current node
+         root.key = temp.key 
+         # delete that smallest node in right tree
+         self.delete(root.right, temp.key)
+
       
       # now we think about the balance
       # height
@@ -138,7 +155,30 @@ class AVLTree(object):
             root.left = self.rightRotate(root.left)
             return self.leftRotate(root)
       
+      return root
+
+    def leftRotate(self, z):
+      y = z.right
+      T2 = y.left
+      y.left = z
+      z.right = T2
+      z.height = 1 + max(self.getHeight(z.left),
+                        self.getHeight(z.right))
+      y.height = 1 + max(self.getHeight(y.left),
+                        self.getHeight(y.right))
+      return y
+
       
+    def rightRotate(self, z):
+      y = z.left
+      T3 = y.right
+      y.right = z
+      z.left = T3
+      z.height = 1 + max(self.getHeight(z.left),
+                           self.getHeight(z.right))
+      y.height = 1 + max(self.getHeight(y.left),
+                           self.getHeight(y.right))
+      return y
 
 
       
