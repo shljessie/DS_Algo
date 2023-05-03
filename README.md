@@ -17,14 +17,16 @@ Full Implementation of Code of Data Structures and Algorithms
 
 ### 2. Greedy Algorithms
 
-* small sidenote (living by the greedy algorithm)
+  ~ * small sidenote (living by the greedy algorithm)
 
-1. Let's start with the root node 20. The weight of the right child is 3 and the weight of the left child is 2.
+    1. Let's start with the root node 20. The weight of the right child is 3 and the weight of the left child is 2.
 
-2. Our problem is to find the largest path. And, the optimal solution at the moment is 3. So, the greedy algorithm will choose 3.
+    2. Our problem is to find the largest path. And, the optimal solution at the moment is 3. So, the greedy algorithm will choose 3.
 
-3. Finally the weight of an only child of 3 is 1. This gives us our final result 20 + 3 + 1 = 24.
+    3. Finally the weight of an only child of 3 is 1. This gives us our final result 20 + 3 + 1 = 24.
 
-However, it is not the optimal solution. There is another path that carries more weight (20 + 2 + 10 = 32) as shown in the image below.
+    However, it is not the optimal solution. There is another path that carries more weight (20 + 2 + 10 = 32) as shown in the image below.
 
-Overall Lesson : Don't be so sad that things didn't work out the way you expected there can be better things that wait ahead.
+
+* Ford Fulkerson Algorithm
+
