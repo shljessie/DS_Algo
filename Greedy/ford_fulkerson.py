@@ -1,4 +1,13 @@
 """
+2023.05.03 --> study some example coding questions 
+
+Ford Fulkerson
+** use when you need to find the max flow
+
+<Use Case Example> 
+Assuming steady conditions (Number of trains on a railway track at any instance of time must not exceeds the track's capacity), if we need to find what is the maximum number of trains (maximum flow) that we can send from City 
+A to city B then the problem is known as the "Maximum Flow Problem" 
+
 Greedy Algorithm within a Flow network
 A term, flow network, is used to describe
 a network of vertices and edges with a source (S) and a sink (T). 
@@ -155,3 +164,7 @@ print(FordFulkerson(graph, source, sink))
 
 # # Display the graph
 # plt.show()
+
+
+
+# first greedy algorithm - personally found it very hard
