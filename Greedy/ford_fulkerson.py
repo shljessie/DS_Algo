@@ -73,6 +73,9 @@ graph = np.array([
 
 
 Part 1. BFS Tree
+We do BFS because we have to find all connected paths
+BFS looks at all connected paths before it starts traversing
+
 weights (graphs) , s (source,  number int value index) , t (sink) , parent (node above, no parent -1)
 
 * visted list = initially False len of weights(graphs)
@@ -109,6 +112,14 @@ while queue :
                 visited[i] = True
                 parent[i] = u
 
+
+Part 2 Ford Fulkerson
+# initialize parents as all values of -1 and max flow to zero
+# parameters graph, s, t
+ 
+def ford_fulkerson(graph, s, t):
+    parent = [-1] * len(graph)
+    max_flow = 0 
 
 
 
