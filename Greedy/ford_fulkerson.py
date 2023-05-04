@@ -41,6 +41,83 @@ graph = np.array([
 2D representation of graphs to a node graph. 1 for the parts where there is an edge.
 """
 
+"""
+2023.05.04 Overall Review
+
+< Ford Fulkerson Algorithm >
+
+* Goal 
+Find the Max Flow value in the graph. 
+The max flow refers to the sum of the min capacities in the available paths in the graph.
+<available paths> we have to subtract the capacities as we minus the graphs
+
+* Code Architecture
+
+[ Large Two parts ]
+1. BFS Tree : keep track of visited paths and capacity availability
+2. Ford Fulkerson : to find min capacities , sum capacities to find max flow
+
+[ Things to note ]
+1.2D matrix representation of graphs = weights
+the row columns are the node values
+
+graph = np.array([
+    [0, 16, 13, 0, 0, 0],
+    [0, 0, 10, 12, 0, 0],
+    [0, 4, 0, 0, 14, 0],
+    [0, 0, 9, 0, 0, 20],
+    [0, 0, 0, 7, 0, 4],
+    [0, 0, 0, 0, 0, 0],
+])
+
+
+
+Part 1. BFS Tree
+weights (graphs) , s (source,  number int value index) , t (sink) , parent (node above, no parent -1)
+
+* visted list = initially False len of weights(graphs)
+* queue = keep track of the node paths that are currently available
+
+    visited = [False] * len(graph)
+    queue =[] 
+
+    queue[0] = s
+    visited[s] = True
+
+* start a while loop to while there is a node to check for path
+    while queue:
+    * start with the first node out of the queue, use pop to remove it too
+        u = queue.pop(0)
+        * for each of the weight connections of the first node,the i is the index of the node
+            for i in range(len(graph[u])): 
+            # if that node connection has not been visited and there is a weight value,
+                if visited[i] == False and graph[u][i] >0:
+                    # place that node index on the queue for the next value to check
+                    queue.append(i)
+                    # set that node to visited and update parent to prior value
+                    visited[i]= True
+                    parent=u
+
+
+while queue : 
+    u = queue.pop(0)
+
+    for i in range(len(graph[u])):
+
+         if visited[i] is False and graph[u][i] > 0:
+                queue.append(i)
+                visited[i] = True
+                parent[i] = u
+
+
+
+
+"""
+
+
+
+
+
 ## find the maximum flow capacity : https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/ 
 
 
@@ -48,26 +125,38 @@ graph = np.array([
 # study more on what the BFS exactly does 
 def BFS(graph, s, t, parent):
     # graph: 
-    # s: Start Node
+    # s: Start Node, number int value index
     # t : Sink Node
     # parent  : parent list is used to keep track of the parent node of each visited node.
     # Return True if there is node that has not iterated.
     visited = [False] * len(graph)
-    queue =[]
+    queue =[] 
+    # set first item of queue to be start list
     queue.append(s)
     visited[s] = True
 
     while queue:
+      print('BFS queue',queue)
       # return queue index 0 value
       u = queue.pop(0)
+      print('u',u)
+    
+      print('graph[u]',graph[u])
 
       for i in range(len(graph[u])):
+        print('i',i)
+        print(visited)
+        print('visited[i]', visited[i])
+        print('graph[u][i]',graph[u][i])
         
         # the graph[u][i] aka the remaining weights are greater than zero
-        # means that there are some capacities left in the model!
+        # here we are not checking anything with capacities like minus or finding the min
+        # we are simply just checking whether there is a cpacity or not
         if visited[i] is False and graph[u][i] > 0:
                 queue.append(i)
+                # set the visited to True
                 visited[i] = True
+                # 현재 check 했던 node 은 이제 parent 으로 setting 해준다.
                 parent[i] = u
 
     # Ford-Fulkerson algorithm, the parent node of a
