@@ -73,15 +73,56 @@ if mutable list, just use copy.deepcopy()
 
 
 * binary search
+> use on sorted list bisect.bisect(array, insert_val)
+> takes O(logn) time cus it's a binary search
+
 * min,max
+> min(array), max(array) , O(n) time
+
 * slicing array 
+a[start:end] ,end not included 
+[5:-1] -1 refers to last value.means don't include last val
+a [1,2,3] a[0:-1] >> [1,2]
+
 * slicing array with three values
+a[ start: end : step], step count from value after start [1,2,3] start1 step 2 would be 3
+
 * use slicing to create copy
+b=a[:], creates new object, mutable object change will be affected in both, O(n) time complexity
+
 * list comphrehension basic
-* list comphrehension , 2d list to 1d
+array=[1,2,3]
+b= [i for i in array]
+[1,2,3]
+
+if statements come at end 
+y = [x**2 for a in range(6) if x % 2 == 0] 
+y = [4,16]
+
+* list comphrehension , 2d list to 1d (by row)
+array=[[1,2,3], [1,2,3],[1,2,3]]
+b = [j for i in array for j in i]
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+
+* list comphrehension , 2d list to 1d (by col) ****
+array=[[1,2,3], [1,2,3],[1,2,3]]
+#by row
+b = [array[row][col] for row in range(len(array)) for col in range(len(array))]
+
+# bitch just flip the rows and columns
+# by col
+# 00 10 20 , 01 11 21 , 02, 12, 22 
+b = [ array[col][row] for row in range(len(array)) for col in range(len(array))]
+
+for row in range(len(array)):
+  for col in range(len(array)):
+    array[row][col]
+
 * list comphrehension , create set
 (avoid using more than two)
 * list and array difference 
+> list can have elements with different values, array has values that are the same
 """
 
 # Coding Questions , comment 지우고 맞춰봐!
@@ -150,3 +191,14 @@ print(B) # B = [4,2,[4,3]]
 A[2][1]= 4
 print(A)  # A = [1,2,[4,4]] , only changes for mutable values
 print(B) # B = [4,2,[4,4]]
+
+
+
+# list comphrehension
+array = [[1,2,3],[1,2,3],[1,2,3]]
+
+for row in range(len(array)):
+  for col in range(len(array)):
+     print('r',row)
+     print('c',col)
+     print(array[col][row])
