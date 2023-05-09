@@ -118,4 +118,26 @@ for i in range(len(a)):
 
 # print(per)
 
+
+# permutations mean the differet combinations we can
+# get from that string, same length
 # faster solution --> recursion
+
+# you need to understand the tree image
+# the reason we swap.
+
+com =[] 
+
+def permutation(a,l,r):
+  if l ==r: 
+    com.append(a)
+  for i in range(l,r):
+    a[l], a[i] = a[i], a[l]
+    permutation(a, l+1, r)
+    a[l], a[i] = a[i], a[l] 
+    # backtrack, so that other permutation combintations can operate on the original
+    # leaving this for the second tree group
+  return com
+
+    
+
