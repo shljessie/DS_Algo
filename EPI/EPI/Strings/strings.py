@@ -139,5 +139,25 @@ def permutation(a,l,r):
     # leaving this for the second tree group
   return com
 
+def permutation_size(a,l,r,n):
+  if l ==r: 
+    com.append(a)
+  for i in range(l,r):
+    a[l], a[i] = a[i], a[l]
+    permutation_size(a, l+1, r,n)
+    a[l], a[i] = a[i], a[l] 
+    # backtrack, so that other permutation combintations can operate on the original
+    # leaving this for the second tree group
+  return com
+
     
 
+# really easy solution
+# itertools.permutations :https://stackoverflow.com/questions/46846978/generate-all-permutations-of-fixed-length-where-the-elements-come-from-two-diffe
+
+
+# find all substrings 
+
+# string segmentaion
+
+# Google Example Coding questions : https://igotanoffer.com/blogs/tech/google-software-engineer-interview#coding
