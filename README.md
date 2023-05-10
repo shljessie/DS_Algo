@@ -36,3 +36,7 @@ Full Implementation of Code of Data Structures and Algorithms
 ### 3. Array
 
 I've organized a list of basic array operations and the meaning of creating copy() deepcopy() ...etc in arrays. Would be great to review before doing coding interviews.
+
+
+### Coding Practice Tracker 
+https://docs.google.com/spreadsheets/d/1IWPaT8uZyOwmcdzuiEixordCl90_NnXGYJ0aJYTte_w/edit#gid=0
