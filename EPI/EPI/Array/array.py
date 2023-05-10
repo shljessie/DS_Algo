@@ -110,7 +110,7 @@ array=[[1,2,3], [1,2,3],[1,2,3]]
 #by row
 b = [array[row][col] for row in range(len(array)) for col in range(len(array))]
 
-# bitch just flip the rows and columns
+# just flip the rows and columns
 # by col
 # 00 10 20 , 01 11 21 , 02, 12, 22 
 b = [ array[col][row] for row in range(len(array)) for col in range(len(array))]

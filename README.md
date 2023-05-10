@@ -32,3 +32,7 @@ Full Implementation of Code of Data Structures and Algorithms
 - Important Concepts : graph 2D form to Node Graph Form , BFS Function Coding , Ford Fulkerson Algo, Understand Overall Architecture of Implementing the Algorithm to Code.
 
 <img width="441" alt="Screen Shot 2023-05-03 at 5 18 53 PM" src="https://user-images.githubusercontent.com/59305253/235950839-55673211-e092-4a6c-9684-17d40bbe8604.png">
+
+### 3. Array
+
+I've organized a list of basic array operations and the meaning of creating copy() deepcopy() ...etc in arrays. Would be great to review before doing coding interviews.
