@@ -8,7 +8,7 @@ Explanation: The answer is "abc", with the length of 3.
 
 """
 
-
+## Hashtable solution
 def lengthOfLongestSubstring(s: str) -> int:
     ans =''
     final =[] 
