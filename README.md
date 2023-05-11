@@ -4,6 +4,41 @@ A Self-Tracked Study of Data Structures and Algorithms
 
 Full Implementation of Code of Data Structures and Algorithms
 
+
+### Videos on Good Tips for Coding Interviews
+
+1. Steps for solving Leetcode Problems and how to approach them.
+https://www.youtube.com/watch?v=xF554Tlzo-c 
+- start with easy leetcode problems alongside reviewing datastructures and algorithms
+
+2. Think of the solution first before you go on to code the problem
+- when thinking of the solution, you are not thinking about how to code the solution.
+- humans cannot multi task don't think of the code solution first!
+- train your brain to think separately about how to come up with the solution and how to code
+- (spends about 15min coding the solution, the rest goes into thinking about the solution)
+
+3. Spend only an hour thinking about the solution to the problem
+- Always go through and read the top solutions
+
+4. You are ready when --> you can solve any new problem you encounter well
+- you can consistently solve leetcode medium level questions in less than 30,40 minutes
+ 
+5. Finally review!
+- spend a good amount of time reviewing what you learned and what problems you solved.
+
+
+## Study Plan 
+
+## May 2023
+- Review Data Structures and Algorithms + Finish all Leetcode Easy questions (30 easy questions)
+https://leetcode.com/problem-list/top-interview-questions/?difficulty=EASY&page=1 
+
+## June 2023
+- Start solving Leetcode medium questions + and constantly review each topic , one topic one day
+
+
+## July 2023 
+-
 ### 1. DFS_1 = Depth First Search 
 
 - Binary Tree  
@@ -36,6 +71,23 @@ Full Implementation of Code of Data Structures and Algorithms
 ### 3. Array
 
 I've organized a list of basic array operations and the meaning of creating copy() deepcopy() ...etc in arrays. Would be great to review before doing coding interviews.
+
+
+
+### 4. Linked List 
+
+Basic Reviews on what Linkedlists return
+return(LinkedList) returns an array [1,2,3,4]
+What does it mean for two variables to have pointers to the same linked list?
+How can we leverage this to keep track of one linkedlist. next value we needt obtain?
+
+* Sample Image below on Merging two sorted linked lists
+- important concepts
+- cur.next = list1 updates the next reference of the current node.
+  - cur.next = list1 modifies the shared ListNode object that cur and dummy are both pointing to, while cur = list1 reassigns cur to a new ListNode object, independent of dummy.
+
+- cur = list1 moves the cur pointer to the next node in the merged list.
+  - when you update cur = list1, you are changing the reference that cur holds. After this assignment, cur will point to the ListNode object that list1 is currently pointing to, while dummy still maintains its reference to the original ListNode object.
 
 
 ### Coding Practice Tracker 
