@@ -76,6 +76,8 @@ def mergeTwoLists(list1, list2):
       # ListNode{val: 1, next: ListNode{val: 1, next: ListNode{val: 2, next: ListNode{val: 4, next: None}}}}
       # ListNode{val: 0, next: ListNode{val: 1, next: ListNode{val: 1, next: ListNode{val: 2, next: ListNode{val: 4, next: None}}}}}
       list1, cur = list1.next, list1
+      # step5 
+
 
     else: 
 
@@ -99,3 +101,52 @@ def mergeTwoLists(list1, list2):
 # >>> when accessing it through the other variable.
 
 # Review the concept behind merging two linked lists : https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/ 
+
+
+class ListNode:
+    def __init__(self, key):
+        self.val = key
+        self.next = None
+         
+ 
+# return a newnode
+def newNode(key):
+    return ListNode(key)
+
+
+# A solution that makes sense to me 
+
+# Brute force solution,
+# sorting the list and then makeing that list a linked list
+def mergeTwoLists(list1, list2):
+
+  # make linked list to list array
+  b = []
+  while list1:
+    b.append(list1.val)
+    list1 = list1.next
+  
+  while list2:
+    b.append(list2.val)
+    list2 = list2.next
+
+  b.sort()
+  result = ListNode()
+  temp = result
+
+  for i in range(len(b)):
+    result.next = ListNode(b[i])
+    result = result.next
+  
+  return temp.next
+
+a = ListNode(5)
+a.next = ListNode(10)
+a.next.next = ListNode(15)
+a.next.next.next =ListNode(40)
+ 
+b = ListNode(2)
+b.next = ListNode(3)
+b.next.next = ListNode(20)
+
+mergeTwoLists(a,b)
