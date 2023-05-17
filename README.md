@@ -92,3 +92,11 @@ How can we leverage this to keep track of one linkedlist. next value we needt ob
 
 ### Coding Practice Tracker 
 https://docs.google.com/spreadsheets/d/1IWPaT8uZyOwmcdzuiEixordCl90_NnXGYJ0aJYTte_w/edit#gid=0
+
+
+### 5. Binary Trees
+
+Binary trees deal with a lot of problems involving recursion! 
+Indentify the recursion problem by noticing the repeated actions.
+Then think of how the output is being returned : is the value at the end of the recurison enough or should I add 1 to it? / am i storign the outputs of my recursion?
+how should i set the base case for my recursion?
