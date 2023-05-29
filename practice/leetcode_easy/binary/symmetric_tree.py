@@ -3,7 +3,7 @@ Given the root of a binary tree, check whether
 it is a mirror of itself (i.e., symmetric around its center).
 https://leetcode.com/problems/symmetric-tree/description/
 
-** 조금 어렵 다시 생각해보기!!
+** 조금 어렵 다시 생각해보기!! recursion 공부
 """
 
 def isSymmetric(self,root):
