@@ -12,6 +12,7 @@ be used to iterate over the container's elements in reverse order.
 
 # reversed(list) => returns an object but doesn't really reverse the original string
 # list.reverse() reverses the list 
+# use [::-1] to actually be able to reverse the list and create a new element 
 
 
 class Solution(object):

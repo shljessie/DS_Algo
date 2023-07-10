@@ -76,6 +76,8 @@ a='asdf9c'
 reversed_string = a[::-1]
 # python reversed returns a reversed object
 # print(reversed(a))
+# but with this value you can't save it to ab object
+# overall try to use [:] or [::-1] when you can to avoid additional issues. 
 
 
 

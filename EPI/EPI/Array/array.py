@@ -72,6 +72,14 @@ if mutable list, just use copy.deepcopy()
     > O(nm) time, new object, and iteration, For example, if we have a list of n lists, and each sublist contains m elements, then the time complexity of copy.deepcopy() on this list would be O(n*m).
 
 
+
+
+*** A.copy() 
+is different! 
+if we do a = A.copy(), a and A are both two different objects. 
+
+the copy.copy() function is unqiue
+
 * binary search
 > use on sorted list bisect.bisect(array, insert_val)
 > takes O(logn) time cus it's a binary search
